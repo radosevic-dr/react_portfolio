@@ -1,0 +1,32 @@
+.navContainer {
+    height: 10rem;
+
+    // Navigation header social links style
+
+    .linkWrapper {
+        max-width: 130rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+        color: black;
+
+        .socialLinks {
+            height: 100%;
+            display: inherit;
+            align-items: center;
+            gap: 1rem;
+
+            a {
+                display: inline-block;
+                height: 2rem;
+                width: 2rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

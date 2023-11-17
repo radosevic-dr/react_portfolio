@@ -1,0 +1,63 @@
+.portfolioContainer {
+    position: rlative;
+
+    .progress {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 5rem;
+        text-align: center;
+
+        h1 {
+            color: orange;
+            font-size: xx-large;
+        }
+
+        .progressBar {
+            height: 1rem;
+            background-color: lightgray;
+        }
+    }
+
+    .content {
+
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .wrapper {
+            max-width: 130rem;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            .imgContainer {
+                flex: 1;
+                height: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .textContent {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+                h2 {
+                    font-size: x-large;
+                }
+            }
+        }
+    }
+}
