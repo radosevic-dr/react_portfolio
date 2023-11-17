@@ -9,8 +9,8 @@ function NavBar() {
             <div className="linkWrapper">
                 <span>Logo</span>
                 <div className="socialLinks">
-                    <a href="#"><img src="/icons/twitter.png" alt="Network X" /></a>
-                    <a href="#"><img src="/icons/github.png" alt="Github" /></a>
+                    <a href="#"><img src="/icons/twitter.png" alt="Network X" style={{ backgroundColor: "white", padding: "2px" }} /></a>
+                    <a href="#"><img src="/icons/github.png" alt="Github" style={{ backgroundColor: "white", outline: "1px solid inherit", borderRadius: "50%" }} /></a>
                     <a href="#"><img src="/icons/linkedin.png" alt="Linkedin" /></a>
                     <a href="#"><img src="/icons/instagram.png" alt="Instagram" /></a>
                     <a href="#"><img src="/icons/facebook.png" alt="facebook" /></a>

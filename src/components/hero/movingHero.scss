@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .heroContainer {
     position: relative;
     height: calc(100vh - 10rem);
@@ -17,6 +19,14 @@
         flex-direction: column;
         justify-content: center;
         gap: 4rem;
+
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
 
         h2 {
             text-transform: uppercase;
@@ -64,6 +74,10 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        @include mobile {
+            display: none
+        }
 
         img {
             width: 100%;

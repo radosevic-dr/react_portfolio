@@ -1,4 +1,4 @@
-import { NavBar, MovingHero, Parallax, Services, Portfolio } from "./components";
+import { NavBar, MovingHero, Parallax, Services, Portfolio, Contact } from "./components";
 
 
 function App() {
@@ -16,10 +16,14 @@ function App() {
       <section id="portfolio">
         <Parallax type="portfolio" />
       </section>
+
+
+      <Portfolio />
+
+
       <section>
-        <Portfolio />
+        <Contact />
       </section>
-      <section></section>
     </div>
   );
 }

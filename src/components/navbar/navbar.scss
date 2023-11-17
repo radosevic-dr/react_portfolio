@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .navContainer {
     height: 10rem;
 
@@ -11,6 +13,17 @@
         height: 100%;
         align-items: center;
         color: black;
+
+        @include mobile {
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        span {
+            @include mobile {
+                display: none;
+            }
+        }
 
         .socialLinks {
             height: 100%;

@@ -50,7 +50,7 @@ function Services() {
             <motion.div className="serviceList" variants={variants}>
                 <motion.div className="box"
                     whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
+                    <h2>Lorem Ipsum</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                         libero enim nisi aliquam consectetur expedita magni eius ex corrupti
@@ -61,7 +61,7 @@ function Services() {
                 </motion.div>
                 <motion.div className="box"
                     whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
+                    <h2>Lorem Ipsum</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                         libero enim nisi aliquam consectetur expedita magni eius ex corrupti
@@ -72,7 +72,7 @@ function Services() {
                 </motion.div>
                 <motion.div className="box"
                     whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
+                    <h2>Lorem Ipsum</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                         libero enim nisi aliquam consectetur expedita magni eius ex corrupti
@@ -83,7 +83,7 @@ function Services() {
                 </motion.div>
                 <motion.div className="box"
                     whileHover={{ background: "lightgray", color: "black" }}>
-                    <h2>Branding</h2>
+                    <h2>Lorem Ipsum</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                         libero enim nisi aliquam consectetur expedita magni eius ex corrupti
