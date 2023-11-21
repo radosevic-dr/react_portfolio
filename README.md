@@ -1,6 +1,6 @@
 # React Portfolio
 
-App demo on [Link](https://dvgx28-5173.csb.app/)
+App demo on [Link](https://mycsgx-5173.csb.app/)
 
 ## Instructions 
 
