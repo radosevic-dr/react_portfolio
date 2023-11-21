@@ -1,8 +1,7 @@
-# React + Vite
+# React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+App demo on [Link](https://dvgx28-5173.csb.app/)
 
-Currently, two official plugins are available:
+## Instructions 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create .env file in server folder. Change all placeholder with your data. For gmail password you need to create and use app passwords, more on [Google](https://support.google.com/accounts/answer/185833?hl=en&sjid=12068544619661118527-EU).

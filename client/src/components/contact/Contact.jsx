@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import "./contact.scss";
+import axios from 'axios';
 
 const variants = {
     initial: {
@@ -21,29 +21,45 @@ const variants = {
 const Contact = () => {
     const ref = useRef();
     const formRef = useRef();
+
+    // form data
+    const [contact, setContact] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+
+    // handle form inputs
+    const handleState = e => {
+        const { name, value } = e.target;
+        setContact(prevState => ({ ...prevState, [name]: value }));
+    };
+
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
     const isInView = useInView(ref, { margin: "-100px" });
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
+        try {
+            await axios({
+                method: "POST",
+                url: "http://localhost:3000/api",
+                data: contact
+            });
+            setSuccess(true);
 
-        emailjs
-            .sendForm(
-                "service_94y20xo",
-                "template_v10u2oh",
-                formRef.current,
-                "pX_2hasGmGcuvjXIW"
-            )
-            .then(
-                (result) => {
-                    setSuccess(true);
-                },
-                (error) => {
-                    setError(true);
-                }
-            );
+        } catch (err) {
+            setError(true);
+        } finally {
+            setContact({
+                name: "",
+                email: "",
+                message: ""
+            });
+            window.history.go("/");
+        }
     };
 
     return (
@@ -106,12 +122,12 @@ const Contact = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 4, duration: 1 }}
                 >
-                    <input type="text" required placeholder="Name" name="name" />
-                    <input type="email" required placeholder="Email" name="email" />
-                    <textarea rows={8} placeholder="Message" name="message" />
+                    <input type="text" required placeholder="Name" name="name" value={contact.name} onChange={handleState} />
+                    <input type="email" required placeholder="Email" name="email" value={contact.email} onChange={handleState} />
+                    <textarea rows={8} placeholder="Message" name="message" value={contact.message} onChange={handleState} />
                     <button>Submit</button>
-                    {error && "Error"}
-                    {success && "Success"}
+                    {error && "Something went wrong"}
+                    {success && "Message sent"}
                 </motion.form>
             </div>
         </motion.div>
